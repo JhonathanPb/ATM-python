@@ -18,7 +18,7 @@ while True:
         conta = input('Conta: ')
         senha = input('Senha: ')
         
-        if operacoes.verificar_dados(conta, senha):
+        if operacoes.verificar_dados(contas, conta, senha):
             print('Login efetuado com sucesso:')
             
             operacoes.limpar_tela()
