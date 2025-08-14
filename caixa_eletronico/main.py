@@ -51,6 +51,7 @@ while True:
                 
                 elif operacoes_bancarias == '4':
                     print('Obrigado por usar ATM PY BANK')
+                    time.sleep(5)
                     break
                 
                 else:
