@@ -52,8 +52,8 @@ while True:
                     pass
                 
                 elif operacoes_bancarias == '4':
-                    print('Obrigado por usar ATM PY BANK')
-                    time.sleep(5)
+                    print('Voltando ao Menu inicial')
+                    time.sleep(3)
                     break
                 
                 else:
@@ -61,8 +61,8 @@ while True:
                       
         else:
             print('Usuario ou senha incorretos!')
-            operacoes.limpar_tela()
             time.sleep(3)
+            operacoes.limpar_tela()
             print('Voltando para o menu inicial em....')
             time.sleep(3)
             print('3')
