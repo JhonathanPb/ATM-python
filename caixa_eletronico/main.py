@@ -19,6 +19,9 @@ while True:
         conta = input('Conta: ')
         senha = input('Senha: ')
         
+        print(f"DEBUG: A conta digitada é: {conta}")
+        print(f"DEBUG: A senha digitada é: {senha}")
+        
         time.sleep(2)
         
         if operacoes.verificar_dados(contas, conta, senha):
