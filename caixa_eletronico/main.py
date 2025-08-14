@@ -1,6 +1,6 @@
 from funcoes_banco import operacoes
 
-operacoes.carregar_dados()
+contas = operacoes.carregar_dados()
 
 while True:
     operacoes.limpar_tela()
@@ -10,10 +10,10 @@ while True:
     print('2. Sair')
     print('-----------------')
     
-    opcoes = input('DIGITE UMA OPÇÃO: ')
+    opcoes_menu = input('DIGITE UMA OPÇÃO: ')
     
   
-    if opcoes == '1':
+    if opcoes_menu == '1':
         print('Digite sua Conta e Senha')
         conta = input('Conta: ')
         senha = input('Senha: ')
@@ -27,11 +27,11 @@ while True:
             print('2. Depositar')
             print('3. Verificar Saldo') 
             
-            opcoes = input('DIGITE UMA OPÇÃO: ')           
+            operacoes_bancarias = input('DIGITE UMA OPÇÃO: ')           
         else:
             print('Usuario ou senha incorretos, digite novamente')
             
-    elif opcoes == '2':
+    elif opcoes_menu == '2':
         print('Obrigado por Usar o ATM PY BANK!')
         break
     else:

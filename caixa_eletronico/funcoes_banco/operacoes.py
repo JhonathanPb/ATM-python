@@ -19,10 +19,10 @@ def limpar_tela():
     else:
         os.system('clear')
         
-def verificar_dados(conta, numero_conta, senha):
-    if numero_conta in conta:
+def verificar_dados(contas, numero_conta, senha):
+    if numero_conta in contas:
         
-        if conta[numero_conta]['senha'] == senha:
+        if contas[numero_conta]['senha'] == senha:
             return True
     
     return False
