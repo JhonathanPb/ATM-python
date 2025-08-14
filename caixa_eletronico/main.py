@@ -25,7 +25,9 @@ while True:
             
             print('1. Sacar')
             print('2. Depositar')
-            print('3. Verificar Saldo')            
+            print('3. Verificar Saldo') 
+            
+            opcoes = input('DIGITE UMA OPÇÃO: ')           
         else:
             print('Usuario ou senha incorretos, digite novamente')
             
