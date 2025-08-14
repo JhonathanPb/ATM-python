@@ -60,6 +60,7 @@ while True:
                     print('Opção INVÁLIDA!!')
                       
         else:
+            operacoes.limpar_tela()
             print('Usuario ou senha incorretos!')
             time.sleep(3)
             operacoes.limpar_tela()
