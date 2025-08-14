@@ -49,7 +49,16 @@ while True:
                     operacoes_bancarias = input('DIGITE UMA OPÇÃO: ') 
                     
                     if operacoes_bancarias == '1':
-                        pass
+                        print('Digite o valor que deseja sacar')
+                        valor = int(input('Valor: '))
+                        
+                        valor = operacoes.sacar(contas, conta, valor)
+                        if valor is not None:
+                            print(f'Saque realizado com sucesso! Valor sacado: R${valor}')
+                            valor = contas[conta]['saldo']
+                        
+                        else:
+                            print('Saldo insuficiente ou valor inválido para saque.')
                     
                     elif operacoes_bancarias == '2':
                         pass

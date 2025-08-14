@@ -26,5 +26,18 @@ def verificar_dados(contas, numero_conta, senha):
             return True
     
     return False
+
+def sacar(contas, numero_conta, valor):
+    saldo_atual = contas[numero_conta]['saldo']
+    
+    if valor > 0 and saldo_atual >= valor:
+        novo_saldo = saldo_atual - valor
+        
+        contas[numero_conta]['saldo'] = novo_saldo
+        salvar_dados(contas)
+        
+        return valor
+    else:
+        return None
         
   
