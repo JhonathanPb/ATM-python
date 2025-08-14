@@ -15,63 +15,74 @@ while True:
     
   
     if opcoes_menu == '1':
-        print('Digite sua Conta e Senha')
+        print('Digite sua Conta')
         conta = input('Conta: ')
-        senha = input('Senha: ')
         
-        print(f"DEBUG: A conta digitada é: {conta}")
-        print(f"DEBUG: A senha digitada é: {senha}")
-        
-        time.sleep(3)
-        
-        if operacoes.verificar_dados(contas, conta, senha):
-            operacoes.limpar_tela()
-            while True:
-                print('Login efetuado com sucesso')
-                time.sleep(3)
+        if conta in contas:
+            nome_usuario = contas[conta]['nome']
+            print(f'Bem-Vindo, {nome_usuario}!')
+            
+            time.sleep(3)
+            
+            print('Digite sua Senha')
+            senha = input('Senha: ')
+            
+            time.sleep(3)
+            
+            if operacoes.verificar_dados(contas, conta, senha):
                 operacoes.limpar_tela()
                 
-                print('-----------------')
-                print('---ATM PY BANK---')
-                print(f'Olá, conta {conta}!')
-                print('1. Sacar')
-                print('2. Depositar')
-                print('3. Verificar Saldo') 
-                print('4. Sair')
-                print('-----------------')
-                
-                operacoes_bancarias = input('DIGITE UMA OPÇÃO: ') 
-                
-                if operacoes_bancarias == '1':
-                    pass
-                
-                elif operacoes_bancarias == '2':
-                    pass
-                
-                elif operacoes_bancarias == '3':
-                    pass
-                
-                elif operacoes_bancarias == '4':
-                    print('Voltando ao Menu inicial')
+                while True:
+                    print('Login efetuado com sucesso')
                     time.sleep(3)
-                    break
-                
-                else:
-                    print('Opção INVÁLIDA!!')
-                      
+                    operacoes.limpar_tela()
+                    
+                    print('-----------------')
+                    print('---ATM PY BANK---')
+                    print(f'Olá, conta {nome_usuario}!')
+                    print('1. Sacar')
+                    print('2. Depositar')
+                    print('3. Verificar Saldo') 
+                    print('4. Sair')
+                    print('-----------------')
+                    
+                    operacoes_bancarias = input('DIGITE UMA OPÇÃO: ') 
+                    
+                    if operacoes_bancarias == '1':
+                        pass
+                    
+                    elif operacoes_bancarias == '2':
+                        pass
+                    
+                    elif operacoes_bancarias == '3':
+                        pass
+                    
+                    elif operacoes_bancarias == '4':
+                        print('Voltando ao Menu inicial')
+                        time.sleep(3)
+                        break
+                    
+                    else:
+                        print('Opção INVÁLIDA!!')
+                        
+            else:
+                operacoes.limpar_tela()
+                print('Senha incorretos!')
+                time.sleep(3)
+                operacoes.limpar_tela()
+                print('Voltando para o menu inicial em....')
+                time.sleep(3)
+                print('3')
+                time.sleep(2)
+                print('2')
+                time.sleep(2)
+                print('1')
+                time.sleep(2)
         else:
-            operacoes.limpar_tela()
-            print('Usuario ou senha incorretos!')
+            print('Conta não encontrada!')
             time.sleep(3)
-            operacoes.limpar_tela()
-            print('Voltando para o menu inicial em....')
-            time.sleep(3)
-            print('3')
-            time.sleep(2)
-            print('2')
-            time.sleep(2)
-            print('1')
-            time.sleep(2)
+            
+
             
     elif opcoes_menu == '2':
         print('Obrigado por Usar o ATM PY BANK!')
