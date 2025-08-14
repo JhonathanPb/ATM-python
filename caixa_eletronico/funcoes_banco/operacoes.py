@@ -39,5 +39,18 @@ def sacar(contas, numero_conta, valor):
         return valor
     else:
         return None
+    
+def depositar(contas, numero_conta, valor):
+    saldo_atual = contas[numero_conta]['saldo']
+    
+    if valor > 0:
+        novo_saldo = saldo_atual + valor
+        
+        contas[numero_conta]['saldo'] = novo_saldo
+        salvar_dados(contas)
+        
+        return novo_saldo
+    else:
+        return None
         
   

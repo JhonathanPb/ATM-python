@@ -39,7 +39,7 @@ while True:
                     
                     print('-----------------')
                     print('---ATM PY BANK---')
-                    print(f'Olá, conta {nome_usuario}!')
+                    print(f'Olá, {nome_usuario}!')
                     print('1. Sacar')
                     print('2. Depositar')
                     print('3. Verificar Saldo') 
@@ -61,10 +61,19 @@ while True:
                             print('Saldo insuficiente ou valor inválido para saque.')
                     
                     elif operacoes_bancarias == '2':
-                        pass
+                        print('Digite o valor que deseja depositar')
+                        valor = int(input('Valor: '))
+                        
+                        valor = operacoes.depositar(contas, conta, valor)
+                        if valor is not None:
+                            print(f'Depósito realizado com sucesso! Novo saldo: R${valor}')
+                            
+                        else:
+                            print('Valor inválido para depósito.')
                     
                     elif operacoes_bancarias == '3':
-                        pass
+                        saldo = contas[conta]['saldo']
+                        print(f'Saldo Atual: {saldo}')
                     
                     elif operacoes_bancarias == '4':
                         print('Voltando ao Menu inicial')
