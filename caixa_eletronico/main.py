@@ -18,7 +18,17 @@ while True:
         conta = input('Conta: ')
         senha = input('Senha: ')
         
-        if operacoes.
+        if operacoes.verificar_dados(conta, senha):
+            print('Login efetuado com sucesso:')
+            
+            operacoes.limpar_tela()
+            
+            print('1. Sacar')
+            print('2. Depositar')
+            print('3. Verificar Saldo')            
+        else:
+            print('Usuario ou senha incorretos, digite novamente')
+            
     elif opcoes == '2':
         print('Obrigado por Usar o ATM PY BANK!')
         break
