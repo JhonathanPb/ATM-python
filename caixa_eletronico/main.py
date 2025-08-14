@@ -25,8 +25,10 @@ while True:
         time.sleep(3)
         
         if operacoes.verificar_dados(contas, conta, senha):
+            operacoes.limpar_tela()
             while True:
-                print('Login efetuado com sucesso:')
+                print('Login efetuado com sucesso')
+                time.sleep(3)
                 operacoes.limpar_tela()
                 
                 print('-----------------')
