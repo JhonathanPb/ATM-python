@@ -23,9 +23,12 @@ while True:
             
             operacoes.limpar_tela()
             
+            print('-----------------')
+            print('---ATM PY BANK---')
             print('1. Sacar')
             print('2. Depositar')
             print('3. Verificar Saldo') 
+            print('-----------------')
             
             operacoes_bancarias = input('DIGITE UMA OPÇÃO: ')           
         else:
