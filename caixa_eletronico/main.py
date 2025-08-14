@@ -22,7 +22,7 @@ while True:
         print(f"DEBUG: A conta digitada é: {conta}")
         print(f"DEBUG: A senha digitada é: {senha}")
         
-        time.sleep(2)
+        time.sleep(3)
         
         if operacoes.verificar_dados(contas, conta, senha):
             while True:
