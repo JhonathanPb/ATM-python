@@ -18,11 +18,13 @@ O projeto do ATM usa o Python para organizar o código em módulos, ler e salvar
 
 ## 📝 Como Usar
 
-1.  **Clone o repositório:**
+1.  **Clone o repositório
 
-2.  **Navegue até a pasta do projeto:**
+2.  **Navegue até a pasta do projeto
 
-3.  **Execute o programa:**
+3.  **Execute o programa
+
+4.  **Insira Conta e Senha (Conta: 12345; Senha: 94040)
 
 
 Ao iniciar, o programa carregará os dados, apresentará o menu de login e estará pronto para uso.
